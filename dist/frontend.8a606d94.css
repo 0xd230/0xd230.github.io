@@ -163,6 +163,22 @@ nav .menus a:hover {
   position: relative;
 }
 
+.special {
+  font-weight: 500;
+  display: inline-block;
+}
+
+.special .underline {
+  background-color: #fff;
+  width: 0%;
+  height: 1px;
+  transition: all .3s ease-in-out;
+}
+
+.special:hover .underline {
+  width: 100%;
+}
+
 #about-section {
   justify-content: center;
   align-items: center;
@@ -174,6 +190,70 @@ nav .menus a:hover {
   width: 80vw;
   margin-top: 50px;
   padding: 70px;
+}
+
+#about-section .about .title {
   font-size: 100px;
+  font-weight: 600;
+}
+
+#about-section .about .body {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+footer {
+  background-color: #101010;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  margin-top: 100px;
+  display: flex;
+  position: relative;
+  bottom: 0;
+}
+
+footer .socials {
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 40px;
+  display: flex;
+}
+
+footer .socials .text p:first-child {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+footer .socials .text p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+footer .socials a {
+  color: #fff;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+footer .socials a img {
+  filter: invert();
+  aspect-ratio: 1;
+  width: 20px;
+  margin: 6px;
+}
+
+footer .break {
+  background-color: #fff;
+  width: 80%;
+  height: 1px;
+}
+
+footer .copyright {
+  margin: 40px;
 }
 /*# sourceMappingURL=frontend.8a606d94.css.map */

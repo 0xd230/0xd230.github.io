@@ -29,5 +29,5 @@ hero.addEventListener("mousemove", (e) => {
 
 hero.addEventListener("mouseleave", () => {
     hero.style.transform = "rotateX(0deg) rotateY(0deg)";
-    hero.style.boxShadow = "0 0 20px rgb(96, 34, 34)";
+    hero.style.boxShadow = "0 0 40px rgb(141, 44, 44)";
 });
