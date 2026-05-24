@@ -1,0 +1,162 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  z-index: -8;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+body {
+  color: #f0f8ff;
+  background-color: #090909;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+nav {
+  backdrop-filter: blur(20px);
+  color: #fff;
+  z-index: 999;
+  background: none;
+  border-bottom: .1px solid #b91010;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+nav .profile {
+  align-items: center;
+  display: flex;
+}
+
+nav .profile .pfp {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+nav .profile .name {
+  margin-left: 20px;
+}
+
+nav .menus a {
+  color: #afafaf;
+  margin: 0 30px;
+  font-weight: 200;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+nav .menus a:hover {
+  color: #fff;
+}
+
+#hero-section {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.ownsection {
+  backdrop-filter: blur(20px) brightness(60%);
+  border: 2px solid #602222;
+  border-radius: 50px;
+  transition: all .5s ease-in-out;
+  box-shadow: 0 0 10px #602222;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.ownsection:hover {
+  border-color: #ff282899;
+  box-shadow: 0 0 10px #f00c;
+}
+
+#hero-section .hero {
+  border-radius: 50px;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: 60vh;
+  padding: 0 70px;
+  display: flex;
+}
+
+#hero-section .hero .info p:first-child {
+  font-size: 5vw;
+  font-weight: 400;
+  transition: all .5s ease-in-out;
+}
+
+#hero-section .hero .info p:nth-child(2) {
+  font-size: 2vw;
+  font-weight: 200;
+  transition: all .5s ease-in-out;
+}
+
+#hero-section .hero .info .contactBtn {
+  color: #fff;
+  background: none;
+  border: 2px solid #602222;
+  border-radius: 50px;
+  margin-top: 30px;
+  padding: 18px 40px;
+  font-weight: 1000;
+  transition: all .5s ease-in-out;
+}
+
+#hero-section .hero .info .contactBtn:hover {
+  border: 2px solid #da1a1a;
+  box-shadow: 0 0 10px #f00c;
+}
+
+#hero-section .hero .profile {
+  aspect-ratio: 1;
+  width: 30%;
+}
+
+#hero-section .hero .profile .pfp {
+  background-color: red;
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease-in-out;
+  position: relative;
+  box-shadow: 0 0 10px #f006;
+}
+
+#hero-section .hero .profile .pfp:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px red;
+}
+
+#about-section {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+#about-section .about {
+  width: 80vw;
+  padding: 70px;
+}
+/*# sourceMappingURL=frontend.8a606d94.css.map */
