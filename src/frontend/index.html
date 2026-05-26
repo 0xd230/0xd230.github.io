@@ -7,7 +7,6 @@
     <title>0xD230 | Bad-ass Engineer</title>
 </head>
 <body>
-
     <nav>
         <div class="profile">
             <div class="pfp"></div>
@@ -29,13 +28,13 @@
         </div>
     </nav>
 
-    <section id="hero-section">
+    <section class="hero-section">
         <div class="hero">
             <section class="info">
                 <p>What's up?</p>
                 <p>I'm D230, the back-end solutionist</p>
 
-                <button class="contactBtn">Contacts</button>
+                <button onclick="location.href='mailto:d230666169706c65@gmail.com';" class="contactBtn">Contacts</button>
             </section>
 
             <section class="profile">
@@ -44,19 +43,118 @@
         </div>
     </section>
 
-    <section id="about-section">
-        <div class="about ownsection hide">
-            <div class="title">Who am I?</div>
+    <section class="about-section" id="about-section">
+        <div class="about">
+            <div class="title">About</div>
             <div class="body">
-                An engineer, and a <span class="special">dreamer <div class="underline"></div></span>
-                <br>
-                <br>
-                d
+                <section class="start">
+                    <section class="ownsection hide">
+                        <p style="font-size: 50px; font-weight: 500;">Who am I?</p>
+                        <br>
+                        I am an angineer, an enthusiast, and a <span class="special">dreamer</span>
+                        <br>
+                        <br>
+                        My plan in this world is to invent, and create new things, achieve goals, that someday may help others achieve.
+                        <br><br>
+                        I do not wish to be praised for my own achievements, because a person's gratitude can already make my whole life worth another try.
+                    </section>
+                    <section class="ownsection hide">
+                        <p style="font-size: 50px; font-weight: 500;">How did I start?</p>
+                        <br>
+                        I started my journey when I was a little 9 year old, at that time i was seeking to mischiviousness. Before I became a back-end programmer, I used to have a really really strong dream of becoming a professional hacker and exploiter.
+                        <br><br>
+                        My little self thus started searching around the internet, i remember how i typed "how to hack" in my bedroom's android TV while imagining myself hacking through complicated systems.
+                        
+                        <br><br>
+                        And how I would lie in front of my friends saying that I can code, and I've made my own game. When they asked me where my game is, I would open the game I donwloaded and say "I made this" (i didn't).
+                        Although it seems that dream turned into something better.
+                    </section>
+                </section>
+                <section class="contents">
+                    <section class="ownsection hide">
+                        <figure>
+                            <img src="../../assets/firstWeb.png" alt="">
+                            <figcaption>The closest recreation of my first website page</figcaption>
+                        </figure>
+
+                        <p style="font-size: 50px; font-weight: 500;">Where did I start?</p>
+                        <br>
+
+                        My frist ever actual project is a simple HTML page, back when I was just 11 years old i would open a free IDE i downloaded in my Ipad and think i can make something professional like how i see in youtube
+
+                        <br><br>
+
+                        This first website looked good because the IDE uses a built in floating display of the HTML in a browser. But internally, it was a disasiter, the CSS is always fixed into some certain pixel.
+
+                        <br><br>
+
+                        Back then, i was so proud of my creations and gave the "localhost" link to a Discord server i got in for seeking experience, luckily the people are kind enough to let me know that localhost isn's openable from other devices. I was invested in front-end dev that I always avoid using Javascript completely.
+                    </section>
+                </section>
             </div>
         </div>
     </section>
 
-    <footer>
+    <section id="projects" class="projects-section hide">
+        <section class="projects">
+            <div class="title">Projects</div>
+            <div class="windows">
+                <div class="card ownsection hide">
+                    <div class="cover">
+                        <div class="img" style="background-image: url('../../assets/galaxyWeb.png');"></div>
+                    </div>
+                    <div class="body">
+                        <div class="body-title">Galaxy Model</div>
+                        <div class="body-desc">A real-time rendered galaxy model made with ThreeJS and pure Javascript</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="footer">
+                        <a class="link" href="https://github.com/0xd230">
+                            <img class="icon" src="../../assets/github-logo.svg" alt="Github Logo">
+                            0xd230
+                        </a>
+                        <a href="https://github.com/0xd230/untitled-web" class="directtosource">View Source &emsp;➤</a>
+                    </div>
+                </div>
+                <div class="card ownsection hide">
+                    <div class="cover">
+                        <div class="img" style="background-image: linear-gradient(#00000000, #000000ee), url('../../assets/append-only.png');"></div>
+                    </div>
+                    <div class="body">
+                        <div class="body-title">Append-Only Filesystem</div>
+                        <div class="body-desc">A append-only file system, utilizing its simplicity to prevent file corruption</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="footer">
+                        <a class="link" href="https://github.com/0xd230">
+                            <img class="icon" src="../../assets/github-logo.svg" alt="Github Logo">
+                            0xd230
+                        </a>
+                        <a href="https://https://github.com/0xd230/Append-Only-File-Sytem" class="directtosource">View Source &emsp;➤</a>
+                    </div>
+                </div>
+                <div class="card ownsection hide">
+                    <div class="cover">
+                        <div class="img" style="background-image: linear-gradient(#00000000, #000000ee), url('../../assets/inductive-loop.png');"></div>
+                    </div>
+                    <div class="body">
+                        <div class="body-title">Inductive Loop Sensor</div>
+                        <div class="body-desc">A metal sensor utilizing the change of magentic field in an inductive loop.</div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="footer">
+                        <a class="link" href="https://github.com/0xd230">
+                            <img class="icon" src="../../assets/github-logo.svg" alt="Github Logo">
+                            0xd230
+                        </a>
+                        <a href="" class="directtosource">View Source &emsp;➤</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer id="socials">
         <div class="socials">
             <div class="text">
                 <p>Connect</p>
@@ -64,12 +162,18 @@
             </div>
             <div class="links">
                 <a href="https://github.com/0xd230">
-                    <img src="../../assets/github-logo.svg" alt="Github Logo">
+                    <img class="icon" src="../../assets/github-logo.svg" alt="Github Logo">
                     0xd230
                 </a>
+
                 <a href="https://www.instagram.com/user666169706c65/">
-                    <img src="../../assets/insta-logo.svg" alt="Instagram Logo">
-                    @user666169706c65
+                    <img class="icon" src="../../assets/insta-logo.svg" alt="Instagram Logo">
+                    @0xd230
+                </a>
+                
+                <a href="https://www.instagram.com/user666169706c65/">
+                    <img class="icon" src="../../assets/x-logo.svg" alt="Instagram Logo">
+                    @0xd230
                 </a>
             </div>
         </div>

@@ -44,6 +44,9 @@ nav .profile {
 
 nav .profile .pfp {
   background-color: #fff;
+  background-image: url("pfp.204a63ae.jpeg");
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -80,7 +83,38 @@ nav .menus a:hover {
   color: #fff;
 }
 
-#hero-section {
+.icon {
+  filter: invert();
+  aspect-ratio: 1;
+  width: 20px;
+  margin: 6px;
+}
+
+.tag {
+  color: #fff;
+  background: #961d1d50;
+  border: 2px solid #821919;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ownsection {
+  backdrop-filter: blur(8px) brightness(120%);
+  border: 2px solid #602222;
+  border-radius: 50px;
+  transition: all .2s ease-in-out;
+  box-shadow: 0 0 10px #602222;
+}
+
+.ownsection:hover {
+  backdrop-filter: blur(8px) brightness(200%);
+  border-color: #ff282899;
+  box-shadow: 0 0 20px #f00c;
+}
+
+.hero-section {
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -88,25 +122,17 @@ nav .menus a:hover {
   display: flex;
 }
 
-.ownsection {
-  backdrop-filter: blur(20px) brightness(60%);
-  border: 2px solid #602222;
-  border-radius: 50px;
-  transition: all .5s ease-in-out;
-  box-shadow: 0 0 10px #602222;
-}
-
-.ownsection:hover {
-  border-color: #ff282899;
-  box-shadow: 0 0 20px #f00c;
-}
-
 .hide {
   opacity: 0;
 }
 
-#hero-section .hero {
-  backdrop-filter: blur(20px) brightness(60%);
+.hero-section {
+  perspective: 1000px;
+}
+
+.hero-section .hero {
+  backdrop-filter: blur(8px) brightness(200%);
+  border: 1px solid #500000;
   border-radius: 50px;
   justify-content: space-between;
   align-items: center;
@@ -115,25 +141,26 @@ nav .menus a:hover {
   padding: 0 70px;
   transition: all .5s ease-in-out;
   display: flex;
+  box-shadow: 0 0 40px #820000;
 }
 
-#hero-section .hero:hover {
+.hero-section .hero:hover {
   transition: all 60ms ease-in-out;
 }
 
-#hero-section .hero .info p:first-child {
+.hero-section .hero .info p:first-child {
   font-size: 5vw;
   font-weight: 400;
   transition: all .5s ease-in-out;
 }
 
-#hero-section .hero .info p:nth-child(2) {
+.hero-section .hero .info p:nth-child(2) {
   font-size: 2vw;
   font-weight: 200;
   transition: all .5s ease-in-out;
 }
 
-#hero-section .hero .info .contactBtn {
+.hero-section .hero .info .contactBtn {
   color: #fff;
   background: none;
   border: 2px solid #602222;
@@ -144,23 +171,31 @@ nav .menus a:hover {
   transition: all .5s ease-in-out;
 }
 
-#hero-section .hero .info .contactBtn:hover {
+.hero-section .hero .info .contactBtn:hover {
   border: 2px solid #da1a1a;
-  box-shadow: 0 0 10px #f00c;
+  box-shadow: inset 0 0 10px #f00c;
 }
 
-#hero-section .hero .profile {
+.hero-section .hero .profile {
   aspect-ratio: 1;
   width: 30%;
 }
 
-#hero-section .hero .profile .pfp {
+.hero-section .hero .profile .pfp {
   background-color: red;
+  background-image: url("pfp.204a63ae.jpeg");
+  background-position: center;
+  background-size: cover;
   border-radius: 50px;
   width: 100%;
   height: 100%;
   transition: all .5s ease-in-out;
   position: relative;
+  box-shadow: 0 0 10px #f00c;
+}
+
+.hero-section .hero .profile .pfp:hover {
+  box-shadow: 0 0 20px red;
 }
 
 .special {
@@ -168,38 +203,156 @@ nav .menus a:hover {
   display: inline-block;
 }
 
-.special .underline {
+.special div {
   background-color: #fff;
   width: 0%;
   height: 1px;
+  margin-top: -4px;
   transition: all .3s ease-in-out;
 }
 
-.special:hover .underline {
+.special:hover div {
   width: 100%;
 }
 
-#about-section {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
+.about-section {
+  padding: 0 8%;
 }
 
-#about-section .about {
-  width: 80vw;
-  margin-top: 50px;
-  padding: 70px;
-}
-
-#about-section .about .title {
-  font-size: 100px;
+.about-section .about .title {
+  font-size: 80px;
   font-weight: 600;
 }
 
-#about-section .about .body {
-  font-size: 26px;
+.about-section .about .body > * {
+  margin: 5% 0;
+}
+
+.about-section .about .body .start {
+  justify-content: space-around;
+  gap: 40px;
+  display: flex;
+}
+
+.about-section .about .contents img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.about-section .about .contents figure {
+  float: left;
+  max-width: 30vw;
+  margin-right: 20px;
+}
+
+.about-section .about .contents figcaption {
+  color: #afafaf;
+  font-size: 80%;
+  font-style: italic;
+}
+
+.about-section .about .body .ownsection {
+  padding: 50px;
+  font-size: 18px;
   font-weight: 300;
+}
+
+.projects-section {
+  margin: 0 8%;
+}
+
+.projects-section .projects {
+  flex-direction: column;
+  display: flex;
+}
+
+.projects-section .projects .title {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.projects-section .projects .windows {
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px 0;
+  display: flex;
+}
+
+.projects-section .projects .windows .ownsection {
+  border-radius: 20px;
+}
+
+.projects-section .projects .windows .card {
+  aspect-ratio: 1 / 1.5;
+  flex-direction: column;
+  transition: all .3s ease-in-out;
+  display: flex;
+  overflow: hidden;
+}
+
+.projects-section .projects .windows .card:hover {
+  transform: translateY(-2%);
+}
+
+.projects-section .projects .windows .card .cover {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.projects-section .projects .windows .card .cover .img {
+  will-change: transform;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.projects-section .projects .windows div:hover .cover .img {
+  transform: scale(1.1);
+}
+
+.projects-section .projects .windows .card .body {
+  flex-grow: 1;
+  margin: 30px;
+}
+
+.projects-section .projects .windows .card .body .body-title {
+  font-size: 170%;
+}
+
+.projects-section .projects .windows .card .body .body-desc {
+  font-size: 120%;
+  font-weight: 200;
+}
+
+.projects-section .projects .windows .card .footer {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 14%;
+  padding: 40px;
+  font-size: 14px;
+  display: flex;
+}
+
+.projects-section .projects .windows .card .border {
+  opacity: .2;
+  background-color: #f0f8ff;
+  width: 90%;
+  height: 1px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.projects-section .projects .windows .card .footer .link, .projects-section .projects .windows .card .footer .directtosource {
+  color: #f0f8ff;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
 }
 
 footer {
@@ -238,13 +391,6 @@ footer .socials a {
   align-items: center;
   text-decoration: none;
   display: flex;
-}
-
-footer .socials a img {
-  filter: invert();
-  aspect-ratio: 1;
-  width: 20px;
-  margin: 6px;
 }
 
 footer .break {

@@ -720,13 +720,13 @@ let hideOffScreenObj = document.querySelectorAll(".hide");
 window.addEventListener("scroll", ()=>{
     hideOffScreenObj.forEach((obj)=>{
         let windowBottom = window.innerHeight + window.scrollY;
-        let objTop = obj.getBoundingClientRect().top + window.scrollY + 300;
+        let objTop = obj.getBoundingClientRect().top + window.scrollY + 100;
         if (objTop < windowBottom) obj.animate({
-            opacity: 1
+            "opacity": "1"
         }, {
             duration: 1000,
             easing: "ease-in-out",
-            fill: "forwards"
+            fill: "both"
         });
     });
 });
@@ -740,18 +740,52 @@ hero.addEventListener("mouseenter", ()=>{
 hero.addEventListener("mousemove", (e)=>{
     let mouseX = e.clientX - heroCenterX;
     let mouseY = e.clientY - heroCenterY;
-    hero.style.transform = `rotateY(${mouseX / 40}deg) rotateX(${-mouseY / 40}deg)`;
-    hero.style.boxShadow = `${-mouseX / 40}px ${-mouseY / 40}px 20px rgba(255, 0, 0, 1)`;
+    hero.style.transform = `rotateY(${mouseX / 250}deg) rotateX(${-mouseY / 250}deg)`;
+    hero.style.boxShadow = `${-mouseX / 100}px ${-mouseY / 100}px 20px rgba(255, 0, 0, 1)`;
+    hero.style.border = '1px solid rgba(255, 0, 0, 1)';
 });
 hero.addEventListener("mouseleave", ()=>{
     hero.style.transform = "rotateX(0deg) rotateY(0deg)";
-    hero.style.boxShadow = "0 0 40px rgb(141, 44, 44)";
+    hero.style.boxShadow = "0 0 40px rgb(130, 0, 0)";
+    hero.style.border = "1px solid rgb(80, 0, 0)";
+});
+let specialText = document.querySelector(".special");
+let underline = document.createElement("div");
+specialText.appendChild(underline);
+specialText.addEventListener("mousemove", ()=>{
+    console.log("true");
 });
 
 },{"./modules/particlebg.js":"XixY7"}],"XixY7":[function(require,module,exports,__globalThis) {
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
 document.body.appendChild(canvas);
+let particles = [];
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+for(let i = 0; i < 50; i++){
+    let radius = Math.random() * 4 + 2;
+    particles.push({
+        radius: radius,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * canvas.height,
+        v_x: Math.random(),
+        v_y: Math.random() * 0.6 + 0.4
+    });
+}
+function updateCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((obj)=>{
+        obj.y -= obj.v_y;
+        if (obj.y - obj.radius < 0) obj.y = canvas.height + obj.radius;
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(255, 0, 0, ${obj.y / canvas.height})`;
+        ctx.arc(obj.x, obj.y, obj.radius, 0, Math.PI * 2);
+        ctx.fill();
+    });
+    requestAnimationFrame(updateCanvas);
+}
+updateCanvas();
 
 },{}]},["eeuH7","enmbU"], "enmbU", "parcelRequireaa12", {})
 

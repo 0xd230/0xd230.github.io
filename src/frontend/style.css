@@ -48,6 +48,9 @@ nav .profile .pfp {
     width: 36px;
     border-radius: 50%;
     background-color: white;
+    background-image: url("../../assets/pfp.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 
 nav .profile .name {
@@ -82,7 +85,38 @@ nav .menus a:hover {
     color: white;
 }
 
-#hero-section {
+.icon {
+    filter: invert(1);
+    margin: 6px;
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(150, 29, 29, 0.315);
+    border-radius: 10px;
+    color: white;
+    border: solid 2px rgb(130, 25, 25);
+}
+
+.ownsection {
+    border-radius: 50px;
+    border: 2px solid rgb(96, 34, 34);
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 10px rgb(96, 34, 34);
+    backdrop-filter: blur(8px) brightness(120%);
+}
+
+.ownsection:hover {
+    backdrop-filter: blur(8px) brightness(200%);
+    border-color: rgba(255, 40, 40, 0.6);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+.hero-section {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -90,52 +124,45 @@ nav .menus a:hover {
     align-items: center;
 }
 
-.ownsection {
-    border-radius: 50px;
-    border: 2px solid rgb(96, 34, 34);
-    transition: .5s ease-in-out;
-    box-shadow: 0 0 10px rgb(96, 34, 34);
-    backdrop-filter: blur(20px) brightness(60%);
-}
-
-.ownsection:hover {
-    border-color: rgba(255, 40, 40, 0.6);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-}
-
 .hide {
     opacity: 0;
 }
 
-#hero-section .hero {
+.hero-section {
+    perspective: 1000px;
+}
+
+.hero-section .hero {
+    backdrop-filter: blur(8px) brightness(200%);
     border-radius: 50px;
-    backdrop-filter: blur(20px) brightness(60%);
     width: 80vw;
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 70px;
+    box-shadow: 0 0 40px rgb(130, 0, 0);
+    border: 1px solid rgb(80, 0, 0);
     transition: .5s ease-in-out;
 }
 
-#hero-section .hero:hover {
+.hero-section .hero:hover {
     transition: .06s ease-in-out;
 }
 
-#hero-section .hero .info p:nth-child(1) {
+.hero-section .hero .info p:nth-child(1) {
     font-size: 5vw;
     font-weight: 400;
     transition: .5s ease-in-out;
 }
 
-#hero-section .hero .info p:nth-child(2) {
+.hero-section .hero .info p:nth-child(2) {
     font-weight: 200;
     font-size: 2vw;
     transition: .5s ease-in-out;
 }
 
-#hero-section .hero .info .contactBtn {
+.hero-section .hero .info .contactBtn {
     margin-top: 30px;
     border: none;
     padding: 18px 40px 18px 40px;
@@ -147,23 +174,31 @@ nav .menus a:hover {
     border: 2px solid rgb(96, 34, 34);
 }
 
-#hero-section .hero .info .contactBtn:hover {
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+.hero-section .hero .info .contactBtn:hover {
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.8);
     border: 2px solid rgb(218, 26, 26);
 }
 
-#hero-section .hero .profile {
+.hero-section .hero .profile {
     width: 30%;
     aspect-ratio: 1/1;
 }
 
-#hero-section .hero .profile .pfp {
+.hero-section .hero .profile .pfp {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
     position: relative;
     height: 100%;
     width: 100%;
     background-color: red;
     border-radius: 50px;
     transition: .5s ease-in-out;
+    background-image: url("../../assets/pfp.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section .hero .profile .pfp:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
 }
 
 .special {
@@ -171,38 +206,169 @@ nav .menus a:hover {
     font-weight: 500;
 }
 
-.special .underline {
+.special div {
+    margin-top: -4;
     height: 1px;
     width: 0%;
     background-color: white;
     transition: .3s ease-in-out;
 }
 
-.special:hover .underline {
+.special:hover div {
     width: 100%;
 }
 
-#about-section {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about-section {
+    padding: 0 8%;
 }
 
-#about-section .about {
-    width: 80vw;
-    padding: 70px;
-    margin-top: 50px;
-}
-
-#about-section .about .title {
-    font-size: 100px;
+.about-section .about .title {
+    font-size: 80px;
     font-weight: 600;
 }
 
-#about-section .about .body {
-    font-size: 26px;
+.about-section .about .body > * {
+    margin: 5% 0;
+}
+
+.about-section .about .body .start {
+    gap: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-section .about .contents figure {
+    float: left;
+    max-width: 30vw;
+    margin-right: 20px;
+}
+
+.about-section .about .contents img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.about-section .about .contents figure {
+    float: left;
+    max-width: 30vw;
+    margin-right: 20px;
+}
+
+.about-section .about .contents figcaption {
+    color: #afafaf;
+    font-size: 80%;
+    font-style: italic;
+}
+
+.about-section .about .body .ownsection {
+    padding: 50px;
+    font-size: 18px;
     font-weight: 300;
+}
+
+.projects-section {
+    margin: 0 8%;
+}
+
+.projects-section .projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-section .projects .title {
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.projects-section .projects .windows {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.projects-section .projects .windows .ownsection {
+    border-radius: 20px;
+}
+
+.projects-section .projects .windows .card {
+    aspect-ratio: 1/1.5;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+}
+
+.projects-section .projects .windows .card:hover {
+    transform: translateY(-2%);
+}
+
+.projects-section .projects .windows .card .cover {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.projects-section .projects .windows .card .cover .img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    transition: .3s ease-in-out;
+}
+
+.projects-section .projects .windows div:hover .cover .img {
+    transform: scale(1.1);
+}
+
+.projects-section .projects .windows .card .body {
+    margin: 30px;
+    flex-grow: 1;
+}
+
+.projects-section .projects .windows .card .body .body-title {
+    font-size: 170%;
+}
+
+.projects-section .projects .windows .card .body .body-desc {
+    font-size: 120%;
+    font-weight: 200;
+}
+
+.projects-section .projects .windows .card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 14%;
+    padding: 40px;
+    font-size: 14px;
+}
+
+.projects-section .projects .windows .card .border {
+    width: 90%;
+    height: 1px;
+    background-color: aliceblue;
+    opacity: 0.2;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects-section .projects .windows .card .footer .link {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.projects-section .projects .windows .card .footer .directtosource {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    text-decoration: none;
 }
 
 footer {
@@ -241,13 +407,6 @@ footer .socials a {
     align-items: center;
     color: white;
     text-decoration: none;
-}
-
-footer .socials a img {
-    filter: invert(1);
-    margin: 6px;
-    width: 20px;
-    aspect-ratio: 1/1;
 }
 
 footer .break {
