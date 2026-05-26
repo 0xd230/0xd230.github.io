@@ -1,4 +1,4 @@
-import "./modules/particlebg.js"
+import "./src/frontend/modules/particlebg.js"
 
 //on scroll, if visible, pop up
 let hideOffScreenObj = document.querySelectorAll(".hide");
