@@ -31,7 +31,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: transparent;
     backdrop-filter: blur(20px);
     display: flex;
@@ -143,7 +143,7 @@ nav .menus a:hover {
     height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 70px;
     box-shadow: 0 0 40px rgb(130, 0, 0);
     border: 1px solid rgb(80, 0, 0);
@@ -157,13 +157,11 @@ nav .menus a:hover {
 .hero-section .hero .info p:nth-child(1) {
     font-size: 5vw;
     font-weight: 400;
-    transition: .5s ease-in-out;
 }
 
 .hero-section .hero .info p:nth-child(2) {
     font-weight: 200;
     font-size: 2vw;
-    transition: .5s ease-in-out;
 }
 
 .hero-section .hero .info .contactBtn {
@@ -241,6 +239,10 @@ nav .menus a:hover {
     justify-content: space-around;
 }
 
+.about-section .about .contents .title1 {
+    display: none;
+}
+
 .about-section .about .contents figure {
     float: left;
     max-width: 30vw;
@@ -288,12 +290,12 @@ nav .menus a:hover {
 .projects-section .projects .windows {
     padding: 40px 0;
     display: flex;
-    justify-content: space-between;
     gap: 30px;
 }
 
 .projects-section .projects .windows .ownsection {
     border-radius: 20px;
+    flex: 1;
 }
 
 .projects-section .projects .windows .card {
@@ -421,4 +423,90 @@ footer .break {
 
 footer .copyright {
     margin: 40px;
+}
+
+@media (max-width: 1250px) {
+
+    .about-section .about .body .start {
+        flex-direction: column;
+    }
+
+    .about-section .about .contents figure {
+        display: contents;
+    }
+    .about-section .about .contents figure img {
+        margin-top: 20px;
+    }
+
+    .about-section .about .contents .title1 {
+        display: contents;
+    }
+
+    .about-section .about .contents .title2 {
+        display: none;
+    }
+
+    .projects-section .projects .windows {
+        flex-direction: column;
+    }
+
+    .projects-section .projects .windows .card:hover {
+        transform: none;
+    }
+
+    .projects-section .projects .windows .card .body .body-title {
+        font-size: 8vw;
+    }
+
+    .projects-section .projects .windows .card .body .body-desc {
+        font-size: 4vw;
+    }
+
+    .projects-section .projects .windows .card .footer .link {
+        display: none;
+    }
+}
+
+@media (max-width: 900) {
+    nav {
+        justify-content: flex-start;
+        padding: 0 100px;
+    }
+
+    nav .menus {
+        display: none;
+    }
+
+    .hero-section .hero {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .hero-section .hero .info {
+        margin-bottom: 80px;
+    }
+
+    .hero-section .hero .info > * {
+        margin: 20px 0;
+    }
+
+    .hero-section .hero .info .contactBtn {
+        display: none;
+    }
+
+    .hero-section .hero .profile {
+        width: 80%;
+        margin: 80px 0;
+    }
+
+    .hero-section .hero .info p:nth-child(1) {
+        font-size: 10vw;
+        font-weight: 400;
+    }
+
+    .hero-section .hero .info p:nth-child(2) {
+        font-weight: 200;
+        font-size: 4vw;
+    }
 }
