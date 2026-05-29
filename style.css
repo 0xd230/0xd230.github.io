@@ -31,7 +31,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background: transparent;
     backdrop-filter: blur(20px);
     display: flex;
@@ -290,7 +290,7 @@ nav .menus a:hover {
 .projects-section .projects .windows {
     padding: 40px 0;
     display: flex;
-    gap: 30px;
+    gap: 60px;
 }
 
 .projects-section .projects .windows .ownsection {
@@ -470,7 +470,7 @@ footer .copyright {
 @media (max-width: 900) {
     nav {
         justify-content: flex-start;
-        padding: 0 100px;
+        padding: 0 60px;
     }
 
     nav .menus {
@@ -487,26 +487,12 @@ footer .copyright {
         margin-bottom: 80px;
     }
 
-    .hero-section .hero .info > * {
-        margin: 20px 0;
-    }
-
     .hero-section .hero .info .contactBtn {
         display: none;
     }
 
     .hero-section .hero .profile {
         width: 80%;
-        margin: 80px 0;
-    }
-
-    .hero-section .hero .info p:nth-child(1) {
-        font-size: 10vw;
-        font-weight: 400;
-    }
-
-    .hero-section .hero .info p:nth-child(2) {
-        font-weight: 200;
-        font-size: 4vw;
+        margin: 60px 0;
     }
 }

@@ -6,8 +6,10 @@ window.addEventListener("scroll", () => {
     hideOffScreenObj.forEach((obj) => {
         let windowBottom = window.innerHeight + window.scrollY;
         let objTop = obj.getBoundingClientRect().top + window.scrollY + 100;
-        if (objTop < windowBottom)
-                obj.animate({"opacity": "1"}, {duration: 1000, easing: "ease-in-out", fill: "both"});
+        if (objTop < windowBottom && !obj.appeared) {
+            obj.appeared = true;
+            obj.animate({"opacity": "1"}, {duration: 1000, easing: "ease-in-out", fill: "both"});
+        }
     });
 });
 
